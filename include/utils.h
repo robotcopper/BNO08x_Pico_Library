@@ -10,7 +10,7 @@ namespace CONFIG {
 
     inline uint I2C_TIMEOUT_US = 5000;
 
-    constexpr uint I2C_BAUD_RATE = 100 * 1000; // 100kHz
+    constexpr uint I2C_BAUD_RATE = 400 * 1000; // 400kHz
     constexpr uint I2C_SDA_PIN = PICO_DEFAULT_I2C_SDA_PIN; // GP4 pin 6;
     constexpr uint I2C_SCL_PIN = PICO_DEFAULT_I2C_SCL_PIN; // GP5 pin 7;
 
