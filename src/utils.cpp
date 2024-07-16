@@ -1,10 +1,4 @@
 #include "utils.h"
-#include "hardware/i2c.h"
-#include "hardware/gpio.h"
-#include "drivetrain_config.h"
-
-volatile bool ESCdelayInProgress = false;
-volatile bool ESCirqTriggered = false;
 
 #define I2C_RECOVERY_CLOCKS 9
 
@@ -73,20 +67,6 @@ void initI2C(i2c_inst_t* &i2c_port, bool force_recovery) {
     gpio_set_function(CONFIG::I2C_SCL_PIN, GPIO_FUNC_I2C);
     gpio_pull_up(CONFIG::I2C_SDA_PIN);
     gpio_pull_up(CONFIG::I2C_SCL_PIN);
-}
-
-float wrap_pi(const float heading) {
-    // constrain heading to within +/-pi (+/-180 degrees) without changing the meaning of the angle
-    // if its more than pi (+180), subtract 2*pi (subtract 360degrees) so we have the "smaller" angle 
-    float wrapped = heading;
-
-    if (heading > M_PI) {
-        wrapped = heading - M_TWOPI;
-    } else if (heading < -M_PI) {
-        wrapped = heading + M_TWOPI;
-    }
-
-    return static_cast<float>(wrapped);
 }
 
 bool reserved_addr(uint8_t addr) {
