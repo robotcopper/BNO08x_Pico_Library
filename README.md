@@ -1,11 +1,16 @@
 # BNO08x Raspberry Pi Pico RP2040 Library
 
-This library is a refactoring of [Mark Mellors](https://github.com/markmellors)' work who made the BNO08x IMU compatible with the Raspberry Pi Pico RP2040.
+This library is a refactoring of [Mark Mellors](https://github.com/markmellors)' work who made the BNO08x IMU compatible with the Raspberry Pi Pico RP2040. 
 
 ## Description
 
 This library was designed to work in I2C with the BNO08x.
 By default the i2c0 and th GP4 and GP5 are used in this project.
+
+## Motivation
+
+Originally used in the [osod24_firmware](https://github.com/thingswebuilt/osod24_firmware) project, this library was designed for the project and a more general public version was needed to acknoledge this valuable work. 
+This is the only resource I have found regarding the use of the BNO08x on Raspberry Pi Pico, and it's not easy to come by. Increasing its accessibility could benefit others besides myself.
 
 ## Installation
 
