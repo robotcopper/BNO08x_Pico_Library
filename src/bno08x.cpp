@@ -39,11 +39,10 @@
   Thank you Adafruit and your developers for all your hard work put into your Library!
 */
 
-#include "bno080.h"
+#include "bno08x.h"
 #include <cmath>
 #include <string.h>
 
-#include "drivetrain_config.h"
 #include "utils.h"
 #include "hardware/gpio.h"
 
