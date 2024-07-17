@@ -1,16 +1,62 @@
 # BNO08x Raspberry Pi Pico RP2040 Library
 
-This library is a refactoring of [Mark Mellors](https://github.com/markmellors)' work who made the BNO08x IMU compatible with the Raspberry Pi Pico RP2040. 
+This library is a refactoring of [Mark Mellors](https://github.com/markmellors)' work who made the BNO08x IMU compatible with the Raspberry Pi Pico RP2040 SDK. 
 
 ## Description
 
 This library was designed to work in I2C with the BNO08x.
-By default the i2c0 and th GP4 and GP5 are used in this project.
+By default the i2c0 and the GP4 and GP5 are used in this project.
+
+<div style="text-align:center;">
+  <img src="assets/pico_bno08x_schematic.png" alt="pico bno08x schematic">
+  <p style="color:gray;">Raspberry Pi Pico connected using I2C to the BNO085 - Schematic created with Fritzing</p>
+</div>
 
 ## Motivation
 
-Originally used in the [osod24_firmware](https://github.com/thingswebuilt/osod24_firmware) project, this library was designed for the project and a more general public version was needed to acknoledge this valuable work. 
-This is the only resource I have found regarding the use of the BNO08x on Raspberry Pi Pico, and it's not easy to come by. Increasing its accessibility could benefit others besides myself.
+Initially developed for the [osod24_firmware](https://github.com/thingswebuilt/osod24_firmware) project, this library was originally tailored specifically to its requirements. There arose a need for a more generalized version to make this resource more widely accessible. <br>
+This project remains the sole documentation I've encountered regarding the utilization of the BNO08x with the Raspberry Pi Pico, a resource not readily available elsewhere. Enhancing its accessibility could prove beneficial to others beyond just myself.
+
+## Project Structure
+
+The project is structured as follows:
+
+```
+BNO08x_Pico_Library
+├── CMakeLists.txt
+├── assets
+├── include
+│   ├── bno08x.h
+│   └── utils.h
+├── README.md
+├── sh2
+│   ├── CMakeLists.txt
+│   ├── include
+│   │   ├── NOTICE.txt
+│   │   ├── sh2_err.h
+│   │   ├── sh2.h
+│   │   ├── sh2_hal.h
+│   │   ├── sh2_SensorValue.h
+│   │   ├── sh2_util.h
+│   │   └── shtp.h
+│   └── src
+│       ├── sh2.c
+│       ├── sh2_SensorValue.c
+│       ├── sh2_util.c
+│       └── shtp.c
+└── src
+    ├── bno08x.cpp
+    └── utils.cpp
+```
+
+The specification of Raspberry Pi Pico pins used for I2C, with I2C0 being the default, and the ability to set the I2C baud rate, are defined in utils.h:
+```
+BNO08x_Pico_Library
+└── include
+    └── utils.h
+```
+## Requirements
+- [piko-sdk](https://github.com/raspberrypi/pico-sdk)
 
 ## Installation
 
