@@ -7,10 +7,8 @@ This library is a refactoring of [Mark Mellors](https://github.com/markmellors)'
 This library was designed to work in I2C with the BNO08x.
 By default the i2c0 and the GP4 and GP5 are used in this project.
 
-<div style="text-align:center;">
-  <img src="assets/pico_bno08x_schematic.png" alt="pico bno08x schematic">
-  <p style="color:gray;">Raspberry Pi Pico connected using I2C to the BNO085 - Schematic created with Fritzing</p>
-</div>
+![Raspberry Pi Pico and BNO085](assets/pico_bno08x_schematic.png)
+<p align="center" style="color:gray;">Raspberry Pi Pico connected using I2C to the BNO085 - Schematic created with Fritzing</p>
 
 ## Motivation
 
@@ -113,7 +111,8 @@ while (true) {
 
 ## Credits and Contributions
 
-1. **Original Developer: SparkFun** :
+1. **Original Developer: <br>
+   &nbsp; SparkFun** :
    - Nathan Seidle @ SparkFun Electronics
    - Date: December 28, 2017
 
@@ -125,7 +124,7 @@ while (true) {
    &nbsp;&nbsp;&nbsp;&nbsp; **Links** :
    - Link to SparkFun_BNO08x_Arduino_Library GitHub repository: [SparkFun_BNO08x_Arduino_Library](https://github.com/sparkfun/SparkFun_BNO08x_Arduino_Library)
 
-2. **Porting** :
+3. **Porting** :
    - **Use of External Code** :
         - Code from Adafruit BNO08x Arduino Library by Bryan Siepert for Adafruit Industries: [Adafruit_BNO08x](https://github.com/adafruit/Adafruit_BNO08x)
         - Use of I2C and SPI read/write functions and code from Adafruit BusIO library: [Adafruit_BusIO](https://github.com/adafruit/Adafruit_BusIO)
